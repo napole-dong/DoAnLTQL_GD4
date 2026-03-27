@@ -38,7 +38,7 @@
             btnQuanLyMon = new Button();
             btnLoaiMon = new Button();
             btnHoaDon = new Button();
-            btnNhanVien = new Button();
+            btnKhachHang = new Button();
             btnThongKe = new Button();
             panelLogo = new Panel();
             lblLogoSub = new Label();
@@ -147,7 +147,7 @@
             flowSidebarMenu.Controls.Add(btnQuanLyMon);
             flowSidebarMenu.Controls.Add(btnLoaiMon);
             flowSidebarMenu.Controls.Add(btnHoaDon);
-            flowSidebarMenu.Controls.Add(btnNhanVien);
+            flowSidebarMenu.Controls.Add(btnKhachHang);
             flowSidebarMenu.Controls.Add(btnThongKe);
             flowSidebarMenu.Dock = DockStyle.Fill;
             flowSidebarMenu.FlowDirection = FlowDirection.TopDown;
@@ -239,21 +239,21 @@
             btnHoaDon.TextAlign = ContentAlignment.MiddleLeft;
             btnHoaDon.UseVisualStyleBackColor = true;
             // 
-            // btnNhanVien
+            // btnKhachHang
             // 
-            btnNhanVien.FlatAppearance.BorderSize = 0;
-            btnNhanVien.FlatStyle = FlatStyle.Flat;
-            btnNhanVien.Font = new Font("Segoe UI", 10F);
-            btnNhanVien.ForeColor = Color.Gainsboro;
-            btnNhanVien.Location = new Point(0, 254);
-            btnNhanVien.Margin = new Padding(0);
-            btnNhanVien.Name = "btnNhanVien";
-            btnNhanVien.Padding = new Padding(20, 0, 0, 0);
-            btnNhanVien.Size = new Size(230, 48);
-            btnNhanVien.TabIndex = 5;
-            btnNhanVien.Text = "👤  Nhân viên";
-            btnNhanVien.TextAlign = ContentAlignment.MiddleLeft;
-            btnNhanVien.UseVisualStyleBackColor = true;
+            btnKhachHang.FlatAppearance.BorderSize = 0;
+            btnKhachHang.FlatStyle = FlatStyle.Flat;
+            btnKhachHang.Font = new Font("Segoe UI", 10F);
+            btnKhachHang.ForeColor = Color.Gainsboro;
+            btnKhachHang.Location = new Point(0, 254);
+            btnKhachHang.Margin = new Padding(0);
+            btnKhachHang.Name = "btnKhachHang";
+            btnKhachHang.Padding = new Padding(20, 0, 0, 0);
+            btnKhachHang.Size = new Size(230, 48);
+            btnKhachHang.TabIndex = 5;
+            btnKhachHang.Text = "👤  Khách hàng";
+            btnKhachHang.TextAlign = ContentAlignment.MiddleLeft;
+            btnKhachHang.UseVisualStyleBackColor = true;
             // 
             // btnThongKe
             // 
@@ -948,7 +948,7 @@
         private Button btnQuanLyMon;
         private Button btnLoaiMon;
         private Button btnHoaDon;
-        private Button btnNhanVien;
+        private Button btnKhachHang;
         private Button btnThongKe;
         private Panel panelLogo;
         private Label lblLogoSub;
