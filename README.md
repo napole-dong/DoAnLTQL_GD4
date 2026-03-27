@@ -18,7 +18,9 @@
   - `NhanVien`
   - `HoaDon`
   - `HoaDon_ChiTiet`
-
+- Thêm bảng:
+  - `User`
+  - `Vaitro`
 ### 3) Chức năng đã triển khai
 - **Dashboard**
   - Thống kê tổng quan: doanh thu hôm nay, số hóa đơn, tình trạng bàn, số món bán.
@@ -50,6 +52,11 @@
   - Hiển thị sơ đồ bàn động.
   - Thêm / xóa bàn.
   - Chuyển bàn / gộp bàn theo nghiệp vụ hóa đơn.
+- **Quản lý nhân viên**
+  - Thêm / sửa / xóa nhân viên.
+  - Tìm kiếm theo từ khóa.
+  - Nhập / xuất CSV.
+  - Validate.
 
 ## Những phần còn thiếu / cần hoàn thiện
 
@@ -57,28 +64,11 @@
 - Chưa thấy đầy đủ luồng **lập hóa đơn tại quầy** (chọn bàn, thêm món, cập nhật số lượng, thanh toán).
 - Chưa hoàn thiện quy trình **mở/đóng hóa đơn** và đồng bộ trạng thái bàn trong mọi trường hợp.
 
-### 2) Nhân viên & phân quyền
-- Chưa có màn hình/luồng quản lý tài khoản nhân viên đầy đủ.
-- Chưa có đăng nhập và phân quyền rõ ràng theo vai trò (quản lý/nhân viên).
-
-### 3) Báo cáo & thống kê
+### 2) Báo cáo & thống kê
 - Dashboard đã có dữ liệu cơ bản, nhưng chưa có báo cáo chi tiết theo:
   - Khoảng thời gian tùy chọn.
   - Theo món / theo loại món / theo nhân viên.
   - Xuất báo cáo (PDF/Excel) nếu yêu cầu đồ án cần.
 
-### 4) Kiểm thử & chất lượng
-- Chưa có bộ test tự động (`unit test`/`integration test`).
-- Cần rà soát thêm xử lý lỗi và thông báo lỗi thân thiện ở các thao tác DB.
-
-### 5) Hoàn thiện sản phẩm
-- Cập nhật `README` chi tiết hơn (hướng dẫn cài đặt, cấu hình DB, chạy migration, tài khoản mẫu).
-- Chuẩn bị dữ liệu mẫu phục vụ demo.
-- Chốt checklist nghiệm thu theo yêu cầu môn học.
-
-## Kế hoạch hoàn thiện đề xuất
-- Hoàn tất luồng bán hàng và thanh toán end-to-end.
-- Bổ sung đăng nhập + phân quyền.
-- Bổ sung báo cáo nâng cao và xuất file báo cáo.
 - Viết test cho các nghiệp vụ quan trọng (món, khách hàng, bàn, hóa đơn).
 - Đóng gói bản demo và hoàn thiện tài liệu nộp đồ án.
