@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanLyQuanCaPhe.Data;
 
@@ -11,9 +12,11 @@ using QuanLyQuanCaPhe.Data;
 namespace QuanLyQuanCaPhe.Migrations
 {
     [DbContext(typeof(CaPheDbContext))]
-    partial class CaPheDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260327073143_ThemBangUserPhanQuyen")]
+    partial class ThemBangUserPhanQuyen
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -200,6 +203,17 @@ namespace QuanLyQuanCaPhe.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("MatKhau")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("QuyenHan")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("TenDangNhap")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("ID");
 
                     b.ToTable("NhanVien");
@@ -227,43 +241,18 @@ namespace QuanLyQuanCaPhe.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("VaiTroID")
-                        .HasColumnType("int");
+                    b.Property<string>("VaiTro")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("NhanVienID")
-                        .IsUnique();
+                    b.HasIndex("NhanVienID");
 
                     b.HasIndex("TenDangNhap")
                         .IsUnique();
 
-                    b.HasIndex("VaiTroID");
-
-                    b.ToTable("User", (string)null);
-                });
-
-            modelBuilder.Entity("QuanLyQuanCaPhe.Data.dtaVaiTro", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<string>("MoTa")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TenVaiTro")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("TenVaiTro")
-                        .IsUnique();
-
-                    b.ToTable("VaiTro", (string)null);
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("QuanLyQuanCaPhe.Data.dtHoaDon_ChiTiet", b =>
@@ -326,20 +315,12 @@ namespace QuanLyQuanCaPhe.Migrations
             modelBuilder.Entity("QuanLyQuanCaPhe.Data.dtaUser", b =>
                 {
                     b.HasOne("QuanLyQuanCaPhe.Data.dtaNhanVien", "NhanVien")
-                        .WithOne("User")
-                        .HasForeignKey("QuanLyQuanCaPhe.Data.dtaUser", "NhanVienID")
+                        .WithMany("Users")
+                        .HasForeignKey("NhanVienID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("QuanLyQuanCaPhe.Data.dtaVaiTro", "VaiTro")
-                        .WithMany("Users")
-                        .HasForeignKey("VaiTroID")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.Navigation("NhanVien");
-
-                    b.Navigation("VaiTro");
                 });
 
             modelBuilder.Entity("QuanLyQuanCaPhe.Data.dtaBan", b =>
@@ -371,11 +352,6 @@ namespace QuanLyQuanCaPhe.Migrations
                 {
                     b.Navigation("HoaDon");
 
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("QuanLyQuanCaPhe.Data.dtaVaiTro", b =>
-                {
                     b.Navigation("Users");
                 });
 #pragma warning restore 612, 618

@@ -120,6 +120,7 @@ namespace QuanLyQuanCaPhe.Forms
             btnQuanLyBan.Click += btnQuanLyBan_Click;
             btnLoaiMon.Click += btnLoaiMon_Click;
             btnKhachHang.Click += btnKhachHang_Click;
+            btnNhanVien.Click += btnNhanVien_Click;
             btnDashboard.Click += btnDashboard_Click;
 
             btnDangXuat.MouseEnter += (_, _) => btnDangXuat.BackColor = Color.FromArgb(76, 56, 45);
@@ -308,6 +309,11 @@ namespace QuanLyQuanCaPhe.Forms
         private void btnKhachHang_Click(object? sender, EventArgs e)
         {
             OpenPage(new frmKhachHang(true), btnKhachHang);
+        }
+
+        private void btnNhanVien_Click(object? sender, EventArgs e)
+        {
+            OpenPage(new frmNhanVien(true), btnNhanVien);
         }
 
         private void btnDashboard_Click(object? sender, EventArgs e)

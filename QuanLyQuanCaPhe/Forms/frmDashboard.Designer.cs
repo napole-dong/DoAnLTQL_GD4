@@ -39,6 +39,7 @@
             btnLoaiMon = new Button();
             btnHoaDon = new Button();
             btnKhachHang = new Button();
+            btnNhanVien = new Button();
             btnThongKe = new Button();
             panelLogo = new Panel();
             lblLogoSub = new Label();
@@ -159,6 +160,7 @@
             flowSidebarMenu.Controls.Add(btnLoaiMon);
             flowSidebarMenu.Controls.Add(btnHoaDon);
             flowSidebarMenu.Controls.Add(btnKhachHang);
+            flowSidebarMenu.Controls.Add(btnNhanVien);
             flowSidebarMenu.Controls.Add(btnThongKe);
             flowSidebarMenu.Dock = DockStyle.Fill;
             flowSidebarMenu.FlowDirection = FlowDirection.TopDown;
@@ -265,18 +267,34 @@
             btnKhachHang.TextAlign = ContentAlignment.MiddleLeft;
             btnKhachHang.UseVisualStyleBackColor = true;
             // 
+            // btnNhanVien
+            // 
+            btnNhanVien.FlatAppearance.BorderSize = 0;
+            btnNhanVien.FlatStyle = FlatStyle.Flat;
+            btnNhanVien.Font = new Font("Segoe UI", 10F);
+            btnNhanVien.ForeColor = Color.Gainsboro;
+            btnNhanVien.Location = new Point(0, 302);
+            btnNhanVien.Margin = new Padding(0);
+            btnNhanVien.Name = "btnNhanVien";
+            btnNhanVien.Padding = new Padding(20, 0, 0, 0);
+            btnNhanVien.Size = new Size(230, 48);
+            btnNhanVien.TabIndex = 6;
+            btnNhanVien.Text = "\U0001f9d1‍💼  Nhân viên";
+            btnNhanVien.TextAlign = ContentAlignment.MiddleLeft;
+            btnNhanVien.UseVisualStyleBackColor = true;
+            // 
             // btnThongKe
             // 
             btnThongKe.FlatAppearance.BorderSize = 0;
             btnThongKe.FlatStyle = FlatStyle.Flat;
             btnThongKe.Font = new Font("Segoe UI", 10F);
             btnThongKe.ForeColor = Color.Gainsboro;
-            btnThongKe.Location = new Point(0, 302);
+            btnThongKe.Location = new Point(0, 350);
             btnThongKe.Margin = new Padding(0);
             btnThongKe.Name = "btnThongKe";
             btnThongKe.Padding = new Padding(20, 0, 0, 0);
             btnThongKe.Size = new Size(230, 48);
-            btnThongKe.TabIndex = 6;
+            btnThongKe.TabIndex = 7;
             btnThongKe.Text = "📈  Thống kê";
             btnThongKe.TextAlign = ContentAlignment.MiddleLeft;
             btnThongKe.UseVisualStyleBackColor = true;
@@ -1024,6 +1042,7 @@
         private System.Windows.Forms.Button btnLoaiMon;
         private System.Windows.Forms.Button btnHoaDon;
         private System.Windows.Forms.Button btnKhachHang;
+        private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label lblLogoSub;
