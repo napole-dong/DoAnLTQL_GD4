@@ -196,7 +196,7 @@
             btnQuanLyBan.Padding = new Padding(20, 0, 0, 0);
             btnQuanLyBan.Size = new Size(230, 48);
             btnQuanLyBan.TabIndex = 1;
-            btnQuanLyBan.Text = "🪑  Quản lý bàn";
+            btnQuanLyBan.Text = "\U0001fa91  Quản lý bàn";
             btnQuanLyBan.TextAlign = ContentAlignment.MiddleLeft;
             btnQuanLyBan.UseVisualStyleBackColor = true;
             // 
@@ -244,7 +244,7 @@
             btnHoaDon.Padding = new Padding(20, 0, 0, 0);
             btnHoaDon.Size = new Size(230, 48);
             btnHoaDon.TabIndex = 4;
-            btnHoaDon.Text = "🧾  Hóa đơn";
+            btnHoaDon.Text = "\U0001f9fe  Hóa đơn";
             btnHoaDon.TextAlign = ContentAlignment.MiddleLeft;
             btnHoaDon.UseVisualStyleBackColor = true;
             // 
@@ -277,7 +277,7 @@
             btnNhanVien.Padding = new Padding(20, 0, 0, 0);
             btnNhanVien.Size = new Size(230, 48);
             btnNhanVien.TabIndex = 6;
-            btnNhanVien.Text = "🧑‍💼  Nhân viên";
+            btnNhanVien.Text = "\U0001f9d1‍💼  Nhân viên";
             btnNhanVien.TextAlign = ContentAlignment.MiddleLeft;
             btnNhanVien.UseVisualStyleBackColor = false;
             // 
@@ -414,7 +414,7 @@
             lblTongNhanVienTitle.ForeColor = Color.FromArgb(90, 106, 101);
             lblTongNhanVienTitle.Location = new Point(18, 36);
             lblTongNhanVienTitle.Name = "lblTongNhanVienTitle";
-            lblTongNhanVienTitle.Size = new Size(139, 23);
+            lblTongNhanVienTitle.Size = new Size(129, 23);
             lblTongNhanVienTitle.TabIndex = 1;
             lblTongNhanVienTitle.Text = "Tổng nhân viên";
             // 
@@ -460,7 +460,7 @@
             lblQuanLyTitle.ForeColor = Color.FromArgb(130, 96, 58);
             lblQuanLyTitle.Location = new Point(18, 36);
             lblQuanLyTitle.Name = "lblQuanLyTitle";
-            lblQuanLyTitle.Size = new Size(75, 23);
+            lblQuanLyTitle.Size = new Size(69, 23);
             lblQuanLyTitle.TabIndex = 1;
             lblQuanLyTitle.Text = "Quản lý";
             // 
@@ -472,7 +472,7 @@
             lblQuanLyIcon.Name = "lblQuanLyIcon";
             lblQuanLyIcon.Size = new Size(39, 27);
             lblQuanLyIcon.TabIndex = 0;
-            lblQuanLyIcon.Text = "🧑";
+            lblQuanLyIcon.Text = "\U0001f9d1";
             // 
             // cardThuNgan
             // 
@@ -506,7 +506,7 @@
             lblThuNganTitle.ForeColor = Color.FromArgb(81, 102, 140);
             lblThuNganTitle.Location = new Point(18, 36);
             lblThuNganTitle.Name = "lblThuNganTitle";
-            lblThuNganTitle.Size = new Size(152, 23);
+            lblThuNganTitle.Size = new Size(151, 23);
             lblThuNganTitle.TabIndex = 1;
             lblThuNganTitle.Text = "Thu ngân/Pha chế";
             // 
@@ -587,7 +587,7 @@
             lblQuyenHan.ForeColor = Color.FromArgb(90, 84, 79);
             lblQuyenHan.Location = new Point(18, 323);
             lblQuyenHan.Name = "lblQuyenHan";
-            lblQuyenHan.Size = new Size(79, 21);
+            lblQuyenHan.Size = new Size(86, 21);
             lblQuyenHan.TabIndex = 13;
             lblQuyenHan.Text = "Quyền hạn";
             // 
@@ -604,6 +604,7 @@
             btnLamMoi.TabIndex = 18;
             btnLamMoi.Text = "Làm mới";
             btnLamMoi.UseVisualStyleBackColor = false;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnXoaNhanVien
             // 
@@ -618,6 +619,7 @@
             btnXoaNhanVien.TabIndex = 17;
             btnXoaNhanVien.Text = "Xóa";
             btnXoaNhanVien.UseVisualStyleBackColor = false;
+            btnXoaNhanVien.Click += btnXoaNhanVien_Click;
             // 
             // btnCapNhatNhanVien
             // 
@@ -632,6 +634,7 @@
             btnCapNhatNhanVien.TabIndex = 16;
             btnCapNhatNhanVien.Text = "Cập nhật";
             btnCapNhatNhanVien.UseVisualStyleBackColor = false;
+            btnCapNhatNhanVien.Click += btnCapNhatNhanVien_Click;
             // 
             // btnThemNhanVien
             // 
@@ -646,6 +649,7 @@
             btnThemNhanVien.TabIndex = 15;
             btnThemNhanVien.Text = "Thêm";
             btnThemNhanVien.UseVisualStyleBackColor = false;
+            btnThemNhanVien.Click += btnThemNhanVien_Click;
             // 
             // btnTimNhanVien
             // 
@@ -660,6 +664,7 @@
             btnTimNhanVien.TabIndex = 21;
             btnTimNhanVien.Text = "Tìm";
             btnTimNhanVien.UseVisualStyleBackColor = false;
+            btnTimNhanVien.Click += btnTimNhanVien_Click;
             // 
             // txtTimNhanVien
             // 
@@ -677,7 +682,7 @@
             lblTimNhanVien.ForeColor = Color.FromArgb(90, 84, 79);
             lblTimNhanVien.Location = new Point(18, 439);
             lblTimNhanVien.Name = "lblTimNhanVien";
-            lblTimNhanVien.Size = new Size(87, 21);
+            lblTimNhanVien.Size = new Size(108, 21);
             lblTimNhanVien.TabIndex = 19;
             lblTimNhanVien.Text = "Tìm nhân viên";
             // 
@@ -697,7 +702,7 @@
             lblMatKhau.ForeColor = Color.FromArgb(90, 84, 79);
             lblMatKhau.Location = new Point(18, 265);
             lblMatKhau.Name = "lblMatKhau";
-            lblMatKhau.Size = new Size(73, 21);
+            lblMatKhau.Size = new Size(75, 21);
             lblMatKhau.TabIndex = 11;
             lblMatKhau.Text = "Mật khẩu";
             // 
@@ -716,7 +721,7 @@
             lblTenDangNhap.ForeColor = Color.FromArgb(90, 84, 79);
             lblTenDangNhap.Location = new Point(18, 207);
             lblTenDangNhap.Name = "lblTenDangNhap";
-            lblTenDangNhap.Size = new Size(108, 21);
+            lblTenDangNhap.Size = new Size(111, 21);
             lblTenDangNhap.TabIndex = 9;
             lblTenDangNhap.Text = "Tên đăng nhập";
             // 
@@ -735,7 +740,7 @@
             lblDiaChi.ForeColor = Color.FromArgb(90, 84, 79);
             lblDiaChi.Location = new Point(198, 149);
             lblDiaChi.Name = "lblDiaChi";
-            lblDiaChi.Size = new Size(56, 21);
+            lblDiaChi.Size = new Size(57, 21);
             lblDiaChi.TabIndex = 7;
             lblDiaChi.Text = "Địa chỉ";
             // 
@@ -754,7 +759,7 @@
             lblDienThoai.ForeColor = Color.FromArgb(90, 84, 79);
             lblDienThoai.Location = new Point(18, 149);
             lblDienThoai.Name = "lblDienThoai";
-            lblDienThoai.Size = new Size(79, 21);
+            lblDienThoai.Size = new Size(81, 21);
             lblDienThoai.TabIndex = 5;
             lblDienThoai.Text = "Điện thoại";
             // 
@@ -773,7 +778,7 @@
             lblHoVaTen.ForeColor = Color.FromArgb(90, 84, 79);
             lblHoVaTen.Location = new Point(18, 91);
             lblHoVaTen.Name = "lblHoVaTen";
-            lblHoVaTen.Size = new Size(74, 21);
+            lblHoVaTen.Size = new Size(76, 21);
             lblHoVaTen.TabIndex = 3;
             lblHoVaTen.Text = "Họ và tên";
             // 
@@ -804,7 +809,7 @@
             lblThongTinNhanVienTitle.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             lblThongTinNhanVienTitle.Location = new Point(16, 8);
             lblThongTinNhanVienTitle.Name = "lblThongTinNhanVienTitle";
-            lblThongTinNhanVienTitle.Size = new Size(185, 25);
+            lblThongTinNhanVienTitle.Size = new Size(179, 25);
             lblThongTinNhanVienTitle.TabIndex = 0;
             lblThongTinNhanVienTitle.Text = "Thông tin nhân viên";
             // 
@@ -930,6 +935,7 @@
             btnNhapNhanVien.TabIndex = 2;
             btnNhapNhanVien.Text = "Nhập";
             btnNhapNhanVien.UseVisualStyleBackColor = false;
+            btnNhapNhanVien.Click += btnNhapNhanVien_Click;
             // 
             // btnXuatNhanVien
             // 
@@ -945,6 +951,7 @@
             btnXuatNhanVien.TabIndex = 1;
             btnXuatNhanVien.Text = "Xuất";
             btnXuatNhanVien.UseVisualStyleBackColor = false;
+            btnXuatNhanVien.Click += btnXuatNhanVien_Click;
             // 
             // lblDanhSachNhanVienTitle
             // 
@@ -952,7 +959,7 @@
             lblDanhSachNhanVienTitle.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             lblDanhSachNhanVienTitle.Location = new Point(0, 12);
             lblDanhSachNhanVienTitle.Name = "lblDanhSachNhanVienTitle";
-            lblDanhSachNhanVienTitle.Size = new Size(188, 25);
+            lblDanhSachNhanVienTitle.Size = new Size(181, 25);
             lblDanhSachNhanVienTitle.TabIndex = 0;
             lblDanhSachNhanVienTitle.Text = "Danh sách nhân viên";
             // 
@@ -1012,7 +1019,7 @@
             lblPageTitle.ForeColor = Color.FromArgb(65, 48, 39);
             lblPageTitle.Location = new Point(22, 23);
             lblPageTitle.Name = "lblPageTitle";
-            lblPageTitle.Size = new Size(155, 28);
+            lblPageTitle.Size = new Size(161, 28);
             lblPageTitle.TabIndex = 0;
             lblPageTitle.Text = "Quản lý nhân sự";
             // 
